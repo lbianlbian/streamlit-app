@@ -25,7 +25,7 @@ if data != None:
         if col in numeric_cols.columns:
             st.table(series.describe().loc[['min', '25%', '50%', '75%', 'max']])
             possible_colors = ["red", "green", "blue", "yellow", "cyan"]
-            rand_color = possible_colors[random.randint(0, len(possible_colors))]
+            rand_color = possible_colors[random.randint(0, len(possible_colors) - 1)]
             #plot distribution
             fig, ax = plt.subplots()
             ax.hist(series, color = rand_color)
